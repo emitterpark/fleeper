@@ -80,7 +80,7 @@ void handleConfigs() {
   inTime = millis();
   serverHandled = true;  
   if (server.hasArg("plain") == true) {        
-    if (server.arg("test") == "true") {
+    if (server.hasArg("test")) {      
       wifiConnect();
     } else {      
       DynamicJsonBuffer jsonBuffer;
