@@ -101,14 +101,14 @@ void handleConfigs() {
 }
 void onPressed() {
   /*
-  Serial.println("pressed!");  
-  buttonPressed = "pressed";
+  Serial.println("pressed short!");  
+  buttonPressed = "short";
   */
 }
 void onPressedLong() {
   /*
   Serial.println("pressed long!");
-  buttonPressed = "pressedlong";
+  buttonPressed = "long";
   */
 }
 void loadConfig() {
@@ -155,14 +155,14 @@ void shutDown() {
   Serial.println("shut down");  
 } 
 void loop() { 
-  if (buttonPressed == "pressed") {
+  if (buttonPressed == "short") {
     buttonPressed = "";
     if (opStatus == "init") {
       wifiConnect();                  
     } else if (opStatus == "exit") {
       shutDown();
     }  
-  } else if (buttonPressed == "pressedlong") {
+  } else if (buttonPressed == "long") {
     buttonPressed = "";
     if (opStatus == "init") {             
       configSet(); 
